@@ -1,0 +1,24 @@
+mixin NavbarPhytolaafi
+  nav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3.bg-light.opacity-85(data-navbar-on-scroll)
+    .container
+      a.navbar-brand(href='index.html')
+        img.d-inline-block.align-top(src=`${CWD}assets/img/iconlogo.png` alt=''  width="50").img-fluid
+        span.text-theme.font-monospace.fs-4.ps-2 Phyto Laafi
+      button.navbar-toggler.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    
+      #navbarSupportedContent.collapse.navbar-collapse.border-top.border-lg-0.mt-4.mt-lg-0
+        ul.navbar-nav.me-auto.mb-2.mb-lg-0
+          li.nav-item.px-2
+            a.nav-link.fw-medium(aria-current='page', href='#header' class= currentPage === 'index' ? 'active' : false ) Accueil
+          li.nav-item.px-2
+            a.nav-link.fw-medium(href='#Opportuanities') Présentation
+          li.nav-item.px-2
+            a.nav-link.fw-medium(href='#testimonial') Avantages
+          li.nav-item.px-2
+            a.nav-link.fw-medium(href='#invest') Equipe
+          li.nav-item.px-2
+            a.nav-link.fw-medium(href='#contact') Contact    
+          
+        form.d-flex
+          button.btn.btn-lg.btn-dark.bg-gradient.order-0(type='submit') Télécharger l'application
